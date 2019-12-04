@@ -5,7 +5,7 @@
                 <a href="{{url('/')}}" class="bravo-logo">
                     @if($logo_id = setting_item("logo_id"))
                         <?php $logo = get_file_url($logo_id,'full') ?>
-                        <img src="{{$logo}}" width="135" alt="{{setting_item("site_title")}}">
+                        <img src="{{$logo}}" width="135" style="padding: 10px;" alt="{{setting_item("site_title")}}">
                     @endif
                 </a>
                 <div class="bravo-menu">
