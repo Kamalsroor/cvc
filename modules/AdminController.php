@@ -19,8 +19,12 @@ class AdminController extends Controller
                 abort(403);
             }
         }
-    }
 
+
+
+        
+    }
+    
     public function hasPermission($permission)
     {
         return Auth::user()->hasPermissionTo($permission);
