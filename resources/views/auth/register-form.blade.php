@@ -16,6 +16,54 @@
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-lg-6 col-md-12">
+            <div class="form-group">
+                <input type="text" class="form-control" name="company_name" autocomplete="off" placeholder="{{__("Company Name")}}">
+                <i class="input-icon field-icon fa"><img src="{{url('images/ico_fullname_signup.svg')}}"></i>
+                <span class="invalid-feedback error error-company_name"></span>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-12">
+            <div class="form-group">
+                <input type="text" class="form-control" name="company_url" autocomplete="off" placeholder="{{__("Company Url")}}">
+                <i class="input-icon field-icon fa"><img src="{{url('images/ico_fullname_signup.svg')}}"></i>
+                <span class="invalid-feedback error error-company_url"></span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6 col-md-12">
+            <div class="form-group">
+                <input type="text" class="form-control" name="city" autocomplete="off" placeholder="{{__("City")}}">
+                <i class="input-icon field-icon fa"><img src="{{url('images/ico_fullname_signup.svg')}}"></i>
+                <span class="invalid-feedback error error-city"></span>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-12">
+            <div class="form-group">
+                <input type="text" class="form-control" name="phone" autocomplete="off" placeholder="{{__("Phone")}}">
+                <i class="input-icon field-icon fa"><img src="{{url('images/ico_fullname_signup.svg')}}"></i>
+                <span class="invalid-feedback error error-phone"></span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6 col-md-12">
+            <div class="form-group">
+                <input type="text" class="form-control" name="address2" autocomplete="off" placeholder="{{__("Address 2")}}">
+                <i class="input-icon field-icon fa"><img src="{{url('images/ico_fullname_signup.svg')}}"></i>
+                <span class="invalid-feedback error error-address2"></span>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-12">
+            <div class="form-group">
+                <input type="text" class="form-control" name="address" autocomplete="off" placeholder="{{__("Address")}}">
+                <i class="input-icon field-icon fa"><img src="{{url('images/ico_fullname_signup.svg')}}"></i>
+                <span class="invalid-feedback error error-address"></span>
+            </div>
+        </div>
+    </div>
     <div class="form-group">
         <input type="email" class="form-control" name="email" autocomplete="off" placeholder="Email *">
         <i class="input-icon field-icon fa"><img src="{{url('images/ico_email_login_form.svg')}}"></i>
