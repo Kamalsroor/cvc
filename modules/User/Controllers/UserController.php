@@ -231,6 +231,7 @@ class UserController extends FrontendController
             try {
 
                 event(new SendMailUserRegistered($user));
+                dd(event(new SendMailUserRegistered($user)));
 
             }catch (Exception $exception){
                 dd($exception->getMessage());
