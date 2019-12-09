@@ -22,6 +22,6 @@ class LocationController extends Controller
         if (empty($row)) {
             return redirect('/');
         }
-        return redirect(route('tour.search')."?location_id=".$row->id);
+        return redirect(route('hotel.search')."?location_id=".$row->id);
     }
 }

@@ -51,8 +51,8 @@ Route::group(['prefix'=>config('location.location_route_prefix')],function(){
 });
 
 Route::group(['prefix'=>config('hotel.hotel_route_prefix')],function(){
-    Route::get('/','\Modules\Hotel\Controllers\HotelController@index')->name('Hotel.search'); // Search
-    Route::get('/{slug}','\Modules\Hotel\Controllers\HotelController@detail')->name("Hotel.detail");;// Detail
+    Route::get('/','\Modules\Hotel\Controllers\HotelController@index')->name('hotel.search'); // Search
+    Route::get('/{slug}','\Modules\Hotel\Controllers\HotelController@detail')->name("hotel.detail");;// Detail
 });
 
 // News
