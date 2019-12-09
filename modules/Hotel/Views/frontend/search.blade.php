@@ -5,7 +5,7 @@
 @endsection
 @section('content')
     <div class="bravo_search_tour">
-        <div class="bravo_banner" @if($bg = setting_item("tour_page_search_banner")) style="background-image: url({{get_file_url($location->image_id,'full')}})" @endif >
+        <div class="bravo_banner" @if($bg = setting_item("tour_page_search_banner")) style="background-image: url({{get_file_url($location->image_id,'full')}});padding: 212px;" @endif >
             <div class="container">
                 <h1>
                     {{$location->name}}
