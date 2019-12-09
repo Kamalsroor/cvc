@@ -18,6 +18,12 @@ class BannarText extends BaseBlock
                     'label' => __('Background Image Uploader')
                 ],
                 [
+                    'id'        => 'title',
+                    'type'      => 'input',
+                    'inputType' => 'text',
+                    'label'     => __('Title')
+                ],
+                [
                     'id'        => 'sub_title',
                     'type'      => 'input',
                     'inputType' => 'text',
