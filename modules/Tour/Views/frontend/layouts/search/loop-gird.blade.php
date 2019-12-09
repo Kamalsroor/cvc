@@ -28,6 +28,8 @@
         <a @if(!empty($blank)) target="_blank" @endif href="{{$row->getDetailUrl()}}">
             {{$row->title}}
         </a>
+        {!! $row->content !!}
+
     </div>
     <?php
     $reviewData = $row->getScoreReview();
