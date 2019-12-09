@@ -231,10 +231,10 @@ class UserController extends FrontendController
             try {
 
                 event(new SendMailUserRegistered($user));
-                dd(event(new SendMailUserRegistered($user)));
+                dd(event(new SendMailUserRegistered($user)), 'Scssess');
 
             }catch (Exception $exception){
-                dd($exception->getMessage());
+                dd($exception->getMessage() , 'error');
                 Log::warning("SendMailUserRegistered: ".$exception->getMessage());
 
             }
