@@ -26,6 +26,9 @@ class Tour extends Bookable
         'title',
         'slug',
         'content',
+        'itinerary',
+        'package_excludes',
+        'dates_rates',
         'image_id',
         'banner_image_id',
         'short_desc',
@@ -61,6 +64,7 @@ class Tour extends Bookable
      */
     protected $casts = [
         'faqs'  => 'array',
+        'itinerary'  => 'array',
     ];
 
     public static function getModelName()

@@ -16,6 +16,7 @@ class TourController extends Controller
 {
     public function __construct()
     {
+        $this->middleware('auth');
     }
 
     public function index(Request $request)
@@ -96,6 +97,7 @@ class TourController extends Controller
         }
         $data = [
             'rows'               => $list,
+            'location'           => $location,
             'tour_category'      => TourCategory::where('status', 'publish')->get()->toTree(),
             'tour_location'      => Location::where('status', 'publish')->limit(1000)->get()->toTree(),
             'tour_min_max_price' => Tour::getMinMaxPrice(),
@@ -120,6 +122,7 @@ class TourController extends Controller
             $data['html_class'] = 'full-page';
             return view('Tour::frontend.search-map', $data);
         }
+        // dd($data, $location);
         return view('Tour::frontend.search', $data);
     }
 
@@ -129,6 +132,7 @@ class TourController extends Controller
         if (empty($row)) {
             return redirect('/');
         }
+        // dd($row);
         $tour_related = [];
         $location_id = $row->location_id;
         if (!empty($location_id)) {

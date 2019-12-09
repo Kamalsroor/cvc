@@ -50,6 +50,11 @@ Route::group(['prefix'=>config('location.location_route_prefix')],function(){
     Route::get('/{slug}','\Modules\Location\Controllers\LocationController@detail')->name("location.detail");;// Detail
 });
 
+Route::group(['prefix'=>config('hotel.hotel_route_prefix')],function(){
+    Route::get('/','\Modules\Hotel\Controllers\HotelController@index')->name('Hotel.search'); // Search
+    Route::get('/{slug}','\Modules\Hotel\Controllers\HotelController@detail')->name("Hotel.detail");;// Detail
+});
+
 // News
 Route::group(['prefix'=>config('news.news_route_prefix')],function(){
     Route::get('/'.config('news.news_category_route_prefix').'/{slug}', '\Modules\News\Controllers\CategoryNewsController@index');

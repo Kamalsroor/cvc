@@ -93,6 +93,7 @@ class TourController extends AdminController
 
     public function edit(Request $request, $id)
     {
+        
         $this->checkPermission('tour_update');
         $row = Tour::find($id);
         if (empty($row)) {

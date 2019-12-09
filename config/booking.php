@@ -2,7 +2,8 @@
 return [
     'booking_route_prefix'=>env("BOOKING_ROUTER_PREFIX",'booking'),
     'services'=>[
-        'tour'=>Modules\Tour\Models\Tour::class
+        'tour'=>Modules\Tour\Models\Tour::class,
+        'hotel'=>Modules\Hotel\Models\Hotel::class
     ],
     'payment_gateways'=>[
         'offline_payment'=>Modules\Booking\Gateways\OfflinePaymentGateway::class,

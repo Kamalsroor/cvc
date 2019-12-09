@@ -19,6 +19,10 @@ class CreateBravoTours extends Migration
             $table->string('title', 255)->nullable();
             $table->string('slug',255)->charset('utf8')->index();
             $table->text('content')->nullable();
+            $table->text('itinerary')->nullable();
+            $table->text('package_excludes')->nullable();
+            $table->text('dates_rates')->nullable();
+            
             $table->integer('image_id')->nullable();
             $table->integer('banner_image_id')->nullable();
             $table->text('short_desc')->nullable();

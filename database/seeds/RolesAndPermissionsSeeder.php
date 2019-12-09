@@ -109,6 +109,16 @@ class RolesAndPermissionsSeeder extends Seeder
         Permission::findOrCreate('location_delete');
         Permission::findOrCreate('location_manage_others');
 
+
+
+
+        // Hotel
+        Permission::findOrCreate('hotel_view');
+        Permission::findOrCreate('hotel_create');
+        Permission::findOrCreate('hotel_update');
+        Permission::findOrCreate('hotel_delete');
+        Permission::findOrCreate('hotel_manage_others');
+
         //Review
         Permission::findOrCreate('review_manage_others');
 

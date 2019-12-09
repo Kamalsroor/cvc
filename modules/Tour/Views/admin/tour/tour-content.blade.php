@@ -6,11 +6,73 @@
             <input type="text" value="{{$row->title}}" placeholder="{{__("Tour title")}}" name="title" class="form-control">
         </div>
         <div class="form-group">
-            <label class="control-label">{{__("Content")}}</label>
+            <label class="control-label">{{__("Overview")}}</label>
             <div class="">
                 <textarea name="content" class="d-none has-ckeditor" cols="30" rows="10">{{$row->content}}</textarea>
             </div>
         </div>
+
+
+        <div class="form-group-item">
+            <label class="control-label">{{__('Itinerary')}}</label>
+            <div class="g-items-header">
+                <div class="row">
+                    <div class="col-md-5">{{__("Title")}}</div>
+                    <div class="col-md-5">{{__('Content')}}</div>
+                    <div class="col-md-1"></div>
+                </div>
+            </div>
+            <div class="g-items">
+                @if(!empty($row->itinerary))
+                    @foreach($row->itinerary as $key=>$itinerary)
+                        <div class="item" data-number="{{$key}}">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <input type="text" name="itinerary[{{$key}}][title]" class="form-control" value="{{$itinerary['title']}}" placeholder="{{__('Eg: When and where does the tour end?')}}">
+                                </div>
+                                <div class="col-md-6">
+                                    <textarea name="itinerary[{{$key}}][content]" class="form-control" placeholder="...">{{$itinerary['content']}}</textarea>
+                                </div>
+                                <div class="col-md-1">
+                                    <span class="btn btn-danger btn-sm btn-remove-item"><i class="fa fa-trash"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                @endif
+            </div>
+            <div class="text-right">
+                <span class="btn btn-info btn-sm btn-add-item"><i class="icon ion-ios-add-circle-outline"></i> {{__('Add item')}}</span>
+            </div>
+            <div class="g-more hide">
+                <div class="item" data-number="__number__">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <input type="text" __name__="itinerary[__number__][title]" class="form-control" placeholder="{{__('Eg: When and where does the tour end?')}}">
+                        </div>
+                        <div class="col-md-6">
+                            <textarea __name__="itinerary[__number__][content]" class="form-control" placeholder="..."></textarea>
+                        </div>
+                        <div class="col-md-1">
+                            <span class="btn btn-danger btn-sm btn-remove-item"><i class="fa fa-trash"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label">{{__("Package Excludes")}}</label>
+            <div class="">
+                <textarea name="package_excludes" class="d-none has-ckeditor" cols="30" rows="10">{{$row->package_excludes}}</textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label">{{__("dates&rates")}}</label>
+            <div class="">
+                <textarea name="dates_rates" class="d-none has-ckeditor" cols="30" rows="10">{{$row->dates_rates}}</textarea>
+            </div>
+        </div> 
         <div class="form-group">
             <label class="control-label">{{__("Description")}}</label>
             <div class="">

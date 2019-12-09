@@ -1,10 +1,10 @@
 <div class="g-header">
     <div class="left">
-        <h2>{{$row->title}}</h2>
+        <h2>{{$row->name}}</h2>
     </div>.
 
 
-    <div class="right">
+    {{-- <div class="right">
         @if($review_score = $row->review_data)
             <div class="review-score">
                 <span class="head-rating">{{$review_score['score_text']}}</span>
@@ -31,7 +31,7 @@
                 </span>
             </div>
         @endif
-    </div>
+    </div> --}}
 
     
 </div>
@@ -116,61 +116,15 @@
 @endif
 
 
-<div class="container">
-    <div class="row">
-        <div class="col-xs-12 ">
-            <nav class="tour_detailes">
-                <div class="nav nav-tabs nav-fill " id="nav-tab" role="tablist">
-                <a class="nav-item nav-link active" id="nav-overview-tab" data-toggle="tab" href="#nav-overview" role="tab" aria-controls="nav-overview" aria-selected="true">{{__("Overview")}}</a>
-                <a class="nav-item nav-link" id="nav-Itinerary-tab" data-toggle="tab" href="#nav-Itinerary" role="tab" aria-controls="nav-Itinerary" aria-selected="true">{{__("Itinerary")}}</a>
-                <a class="nav-item nav-link" id="nav-package_excludes-tab" data-toggle="tab" href="#nav-package_excludes" role="tab" aria-controls="nav-package_excludes" aria-selected="true">{{__("Package Excludes")}}</a>
-                <a class="nav-item nav-link" id="nav-dates_rates-tab" data-toggle="tab" href="#nav-dates_rates" role="tab" aria-controls="nav-dates_rates" aria-selected="true">{{__("dates&rates")}}</a>
-                </div>
-                
-            </nav>
-            <div class="tab-content-tour py-3 px-3 px-sm-0" id="nav-tabContent">
-                <div class="tab-pane fade show active" id="nav-overview" role="tabpanel" aria-labelledby="nav-overview-tab">
-                    {!!  $row->content !!}
-                </div>
-                @if($row->itinerary)
-                    <div class="tab-pane fade" id="nav-Itinerary" role="tabpanel" aria-labelledby="nav-Itinerary-tab">
-                        {{-- {!!  $row->itinerary !!} --}}
-                        <div class="g-faq">
-                            @foreach($row->itinerary as $item)
-                                <div class="item">
-                                    <div class="header">
-                                        <i class="field-icon icofont-support-itinerary"></i>
-                                        <h5>{{$item['title']}}</h5>
-                                        <span class="arrow"><i class="fa fa-angle-down"></i></span>
-                                    </div>
-                                    <div class="body">
-                                        {{$item['content']}}
-                                    </div>
-                                </div>
-                            @endforeach
-                        </div>
-                    </div>
-                @endif
 
-                <div class="tab-pane fade" id="nav-package_excludes" role="tabpanel" aria-labelledby="nav-package_excludes-tab">
-                    {!!  $row->package_excludes !!}
-                </div>
-                <div class="tab-pane fade" id="nav-dates_rates" role="tabpanel" aria-labelledby="nav-dates_rates-tab">
-                    {!!  $row->dates_rates !!}
-                </div>
-        
-            </div>
-        </div>
-    </div>
-</div>
-{{-- @if($row->content)
+@if($row->content)
     <div class="g-overview">
         <h3>{{__("Overview")}}</h3>
         <div class="description">
-            
+            {!!  $row->content !!}
         </div>
     </div>
-@endif --}}
+@endif
 
 
 @if($row->faqs)
@@ -190,6 +144,7 @@
     @endforeach
 </div>
 @endif
+
 @if($row->map_lat && $row->map_lng)
 <div class="g-location">
     <h3>{{__("Tour Location")}}</h3>

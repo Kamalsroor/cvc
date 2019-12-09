@@ -49,6 +49,13 @@ $menus = [
         'permission' => 'location_view',
     ],
     [
+        "position"=>30,
+        'url'        => 'admin/module/hotel',
+        'title'      => __("Hotel"),
+        'icon'       => 'icon ion-md-business',
+        'permission' => 'hotel_view',
+    ],
+    [
         "position"=>40,
         'url'        => 'admin/module/tour',
         'title'      => __("Tour"),

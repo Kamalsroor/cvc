@@ -12,7 +12,7 @@
                 </h1>
             </div>
         </div>
-        <div class="bravo_form_search">
+        {{-- <div class="bravo_form_search">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-9 col-md-12">
@@ -20,11 +20,11 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <div class="container">
             <h1>{{__("content")}}</h1>
             {!! $location->content !!}
-            @include('Tour::frontend.layouts.search.list-item')
+            @include('Hotel::frontend.search.list-item') 
         </div>
     </div>
 @endsection

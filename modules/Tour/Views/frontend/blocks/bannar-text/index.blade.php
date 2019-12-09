@@ -2,9 +2,6 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <div class="g-form-control">
-                    @include('Tour::frontend.blocks.form-search-tour.form-search')
-                </div>
                 <h1 class="text-heading text-center">{{$title}}</h1>
                 <div class="sub-heading text-center">{{$sub_title}}</div>
             </div>

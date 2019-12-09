@@ -6,7 +6,7 @@
         <div class="bravo-list-item">
             <div class="topbar-search">
                 <div class="text">
-                    {{ __(":total tours found",['total'=>$rows->total()]) }}
+                    {{ __(":total Hotel found",['total'=>$rows->total()]) }}
                 </div>
                 <div class="control">
 
@@ -17,7 +17,7 @@
                     @if($rows->total() > 0)
                         @foreach($rows as $row)
                             <div class="col-lg-4 col-md-6">
-                                @include('Tour::frontend.layouts.search.loop-gird')
+                                @include('Hotel::frontend.search.loop-gird')
                             </div>
                         @endforeach
                     @else
@@ -30,7 +30,7 @@
             <div class="bravo-pagination">
                 {{$rows->appends(request()->query())->links()}}
                 @if($rows->total() > 0)
-                    <span class="count-string">{{ __("Showing :from - :to of :total Tours",["from"=>$rows->firstItem(),"to"=>$rows->lastItem(),"total"=>$rows->total()]) }}</span>
+                    <span class="count-string">{{ __("Showing :from - :to of :total Hotel",["from"=>$rows->firstItem(),"to"=>$rows->lastItem(),"total"=>$rows->total()]) }}</span>
                 @endif
             </div>
         </div>
