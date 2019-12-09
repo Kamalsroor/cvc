@@ -162,6 +162,36 @@ class UserController extends FrontendController
                 'required',
                 'string'
             ],
+            'company_name'  => [
+                'required',
+                'string',
+                'max:255'
+            ],
+            'company_url'  => [
+                'required',
+                'string',
+                'max:255'
+            ],
+            'address'  => [
+                'required',
+                'string',
+                'max:255'
+            ],
+            'address2'  => [
+                'required',
+                'string',
+                'max:255'
+            ],
+            'phone'  => [
+                'required',
+                'string',
+                'max:255'
+            ],
+            'city'  => [
+                'required',
+                'string',
+                'max:255'
+            ],
             'term'       => ['required'],
         ];
         $messages = [
