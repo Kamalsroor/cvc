@@ -97,7 +97,7 @@ class TourController extends Controller
         }
         $data = [
             'rows'               => $list,
-            'location'           => $location,
+            // 'location'           => $location,
             'tour_category'      => TourCategory::where('status', 'publish')->get()->toTree(),
             'tour_location'      => Location::where('status', 'publish')->limit(1000)->get()->toTree(),
             'tour_min_max_price' => Tour::getMinMaxPrice(),
