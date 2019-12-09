@@ -230,7 +230,7 @@ class UserController extends FrontendController
             ]);
             Auth::loginUsingId($user->id);
             try {
-                Mail::to($user->email)->queue(new queueMailUserRegistered($user));
+                Mail::to($user->email)->queue(new SendMailUserRegistered($user));
 
                 // event(new SendMailUserRegistered($user));
                 dd( 'Scssess');
