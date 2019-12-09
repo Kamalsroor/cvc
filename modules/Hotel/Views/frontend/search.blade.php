@@ -5,10 +5,10 @@
 @endsection
 @section('content')
     <div class="bravo_search_tour">
-        <div class="bravo_banner" @if($bg = setting_item("tour_page_search_banner")) style="background-image: url({{get_file_url($bg,'full')}})" @endif >
+        <div class="bravo_banner" @if($bg = setting_item("tour_page_search_banner")) style="background-image: url({{get_file_url($location->image_id,'full')}})" @endif >
             <div class="container">
                 <h1>
-                    {{setting_item("tour_page_search_title")}}
+                    {{$location->name}}
                 </h1>
             </div>
         </div>
@@ -24,6 +24,8 @@
         <div class="container">
             <h1>{{__("content")}}</h1>
             {!! $location->content !!}
+
+            
             @include('Hotel::frontend.search.list-item') 
         </div>
     </div>
