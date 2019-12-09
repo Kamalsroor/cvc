@@ -230,10 +230,10 @@ class UserController extends FrontendController
             ]);
             Auth::loginUsingId($user->id);
             try {
-                Mail::to($user->email)->send(new SendMailUserRegistered($user));
+                Mail::to($user->email)->queue(new queueMailUserRegistered($user));
 
                 // event(new SendMailUserRegistered($user));
-                dd(Mail::to($user->email)->send(new SendMailUserRegistered($user)), 'Scssess');
+                dd( 'Scssess');
 
             }catch (Exception $exception){
                 dd($exception->getMessage() , 'error');
