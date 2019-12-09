@@ -30,7 +30,7 @@
                 {{$row->title}}
             </h4>
         </a>
-        {!! $row->content !!}
+        {!! $row->short_desc !!}
 
     </div>
 
