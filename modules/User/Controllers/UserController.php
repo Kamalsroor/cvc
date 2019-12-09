@@ -233,7 +233,7 @@ class UserController extends FrontendController
                 event(new SendMailUserRegistered($user));
 
             }catch (Exception $exception){
-
+                dd($exception->getMessage());
                 Log::warning("SendMailUserRegistered: ".$exception->getMessage());
 
             }
