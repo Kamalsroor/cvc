@@ -23,7 +23,7 @@
         </div>
         <div class="container">
             <h1>{{__("content")}}</h1>
-            {!! $location->content !!}
+            {{-- {!! $location->content !!} --}}
             @include('Tour::frontend.layouts.search.list-item')
         </div>
     </div>
