@@ -15,6 +15,7 @@ use Illuminate\Support\MessageBag;
 use Validator;
 use Modules\Booking\Models\Booking;
 use App\Helpers\ReCaptchaEngine;
+use Mail;
 
 class UserController extends FrontendController
 {
