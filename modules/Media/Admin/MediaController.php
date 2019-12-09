@@ -149,6 +149,7 @@ class MediaController extends AdminController
             'jpeg',
             'bmp',
             'png',
+            'webp',
             'gif',
             'zip',
             'rar',
@@ -176,6 +177,7 @@ class MediaController extends AdminController
             'bmp',
             'png',
             'gif',
+            'webp',
             'svg'
         ];
         $uploadConfigs = [
