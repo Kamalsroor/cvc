@@ -1,3 +1,3 @@
 <div>
-    Hi, This is : {{ $user->email }}
+    Hi, This is : {{ $email }}
 </div>

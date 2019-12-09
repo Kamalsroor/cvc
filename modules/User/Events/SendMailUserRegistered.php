@@ -24,6 +24,8 @@ class SendMailUserRegistered
      */
     public function build()
     {
-        return $this->view('emails');
+        return $this->view('emails')->with([
+            'email' => $this->user->email,
+        ]);
     }
 }
