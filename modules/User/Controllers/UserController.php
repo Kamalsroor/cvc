@@ -179,7 +179,8 @@ class UserController extends FrontendController
                 'max:255'
             ],
             'address2'  => [
-                'required',
+                'sometimes',
+                'nullable',
                 'string',
                 'max:255'
             ],
@@ -230,8 +231,8 @@ class UserController extends FrontendController
             ]);
             Auth::loginUsingId($user->id);
             try {
-                event(new SendMailUserRegisteredListen($user));
-
+                dd(event(new SendMailUserRegisteredListen($user)));
+                // event(new SendMailUserRegisteredListen($user));
             }catch (Exception $exception){
                 Log::warning("SendMailUserRegistered: ".$exception->getMessage());
 
