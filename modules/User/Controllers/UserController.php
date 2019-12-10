@@ -4,7 +4,7 @@ namespace Modules\User\Controllers;
 use Illuminate\Support\Facades\Log;
 use Matrix\Exception;
 use Modules\FrontendController;
-use Modules\User\Events\SendMailUserRegistered;
+use Modules\User\Listeners\SendMailUserRegisteredListen;
 use Modules\User\Models\Newsletter;
 use Modules\User\Models\Subscriber;
 use Modules\User\Models\User;
@@ -232,7 +232,7 @@ class UserController extends FrontendController
             try {
                 // Mail::to($user->email)->queue(new SendMailUserRegistered($user));
 
-                event(new SendMailUserRegistered($user));
+                event(new SendMailUserRegisteredListen($user));
                 // dd( 'Scssess');
 
             }catch (Exception $exception){

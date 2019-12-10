@@ -6,7 +6,7 @@
 @endsection
 @section('content')
     <div class="bravo_detail_tour">
-        @include('Tour::frontend.layouts.details.tour-banner')
+        {{-- @include('Tour::frontend.layouts.details.tour-banner') --}}
         <div class="bravo_content">
             <div class="container">
                 <div class="row">
