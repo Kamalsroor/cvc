@@ -19,8 +19,9 @@ class UserStatus
     {
         $user = Auth::user();
         if ($user) {
+            dd($user->status);
             switch ($user->status) {
-                case "blocked":
+                case "Blocked":
                     Auth::guard()->logout();
                     $request->session()->invalidate();
                     return redirect('login')->with('error', 'Your account has been Not Active');
