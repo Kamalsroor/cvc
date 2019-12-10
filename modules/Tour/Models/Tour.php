@@ -30,6 +30,7 @@ class Tour extends Bookable
         'package_excludes',
         'package_includes',
         'tour_map',
+        'order_num',
         'dates_rates',
         'image_id',
         'banner_image_id',

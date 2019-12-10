@@ -96,7 +96,7 @@
             </div>
         </div>
 
-        
+
         <div class="form-group">
             <label class="control-label">{{__("Category")}}</label>
             <div class="">
@@ -139,6 +139,11 @@
                 </div>
             </div>
         </div>
+        <div class="form-group">
+            <label class="control-label">{{__("Order")}}</label>
+            <input type="text" name="order_num" class="form-control" value="{{$row->order_num}}" placeholder="{{__("Order")}}">
+        </div>
+        
         <div class="form-group-item">
             <label class="control-label">{{__('FAQs')}}</label>
             <div class="g-items-header">
