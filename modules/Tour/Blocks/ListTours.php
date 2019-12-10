@@ -77,11 +77,11 @@ class ListTours extends BaseBlock
                             'id'   => 'id',
                             'name' => __("Date Create")
                         ],
-                        /*[
-                            'id'   => 'price',
-                            'name' => __("Price")
-                        ],
                         [
+                            'id'   => 'order_num',
+                            'name' => __("Order Num")
+                        ],
+                        /*[
                             'id'   => 'review_score',
                             'name' => __("Review Score")
                         ],*/
