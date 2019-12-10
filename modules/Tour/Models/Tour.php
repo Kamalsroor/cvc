@@ -29,6 +29,7 @@ class Tour extends Bookable
         'itinerary',
         'package_excludes',
         'package_includes',
+        'tour_map',
         'dates_rates',
         'image_id',
         'banner_image_id',

@@ -69,6 +69,7 @@
         </div>
 
 
+        
         <div class="form-group">
             <label class="control-label">{{__("Package Excludes")}}</label>
             <div class="">
@@ -87,6 +88,15 @@
                 <textarea name="short_desc" class="form-control" cols="30" rows="4">{{$row->short_desc}}</textarea>
             </div>
         </div>
+
+        <div class="form-group">
+            <label class="control-label">{{__("Tour Map")}}</label>
+            <div class="">
+                <textarea name="tour_map" class="d-none has-ckeditor" cols="30" rows="10">{{$row->tour_map}}</textarea>
+            </div>
+        </div>
+
+        
         <div class="form-group">
             <label class="control-label">{{__("Category")}}</label>
             <div class="">
