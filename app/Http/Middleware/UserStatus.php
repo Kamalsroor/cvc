@@ -19,7 +19,7 @@ class UserStatus
     {
         $user = Auth::user();
         if ($user) {
-            dd($user->status);
+            // dd($user->status);
             switch ($user->status) {
                 case "Blocked":
                     Auth::guard()->logout();
