@@ -65,10 +65,21 @@ class General extends Seeder
                     'name' => 'list_widget_footer',
                     'val' => '[{"title":"NEED HELP?","size":"3","content":"<div class=\"contact\">\r\n        <div class=\"c-title\">\r\n            Call Us\r\n        <\/div>\r\n        <div class=\"sub\">\r\n            + 00 222 44 5678\r\n        <\/div>\r\n    <\/div>\r\n    <div class=\"contact\">\r\n        <div class=\"c-title\">\r\n            Email for Us\r\n        <\/div>\r\n        <div class=\"sub\">\r\n            hello@yoursite.com\r\n        <\/div>\r\n    <\/div>\r\n    <div class=\"contact\">\r\n        <div class=\"c-title\">\r\n            Follow Us\r\n        <\/div>\r\n        <div class=\"sub\">\r\n            <a href=\"#\">\r\n                <img src=\"https:\/\/travelhotel.wpengine.com\/wp-content\/uploads\/2018\/12\/ico_facebook_footer.png\">\r\n            <\/a>\r\n            <a href=\"#\">\r\n                <img src=\"https:\/\/travelhotel.wpengine.com\/wp-content\/uploads\/2018\/12\/ico_twitter_footer.png\">\r\n            <\/a>\r\n            <a href=\"#\">\r\n                <img src=\"https:\/\/travelhotel.wpengine.com\/wp-content\/uploads\/2018\/12\/ico_instagram_footer.png\">\r\n            <\/a>\r\n        <\/div>\r\n    <\/div>"},{"title":"COMPANY","size":"3","content":"<ul>\r\n    <li><a href=\"#\">About Us<\/a><\/li>\r\n    <li><a href=\"#\">Community Blog<\/a><\/li>\r\n    <li><a href=\"#\">Rewards<\/a><\/li>\r\n    <li><a href=\"#\">Work with Us<\/a><\/li>\r\n    <li><a href=\"#\">Meet the Team<\/a><\/li>\r\n<\/ul>"},{"title":"SUPPORT","size":"3","content":"<ul>\r\n    <li><a href=\"#\">Account<\/a><\/li>\r\n    <li><a href=\"#\">Legal<\/a><\/li>\r\n    <li><a href=\"#\">Contact<\/a><\/li>\r\n    <li><a href=\"#\">Affiliate Program<\/a><\/li>\r\n    <li><a href=\"#\">Privacy Policy<\/a><\/li>\r\n<\/ul>"},{"title":"SETTINGS","size":"3","content":"<ul>\r\n<li><a href=\"#\">Setting 1<\/a><\/li>\r\n<li><a href=\"#\">Setting 2<\/a><\/li>\r\n<\/ul>"}]',
                     'group' => "general",
+                ],
+                [
+                    'name' => 'website_phone',
+                    'val' => '01012316954',
+                    'group' => "general",
+                ],
+                [
+                    'name' => 'company_address',
+                    'val' => 'address',
+                    'group' => "general",
                 ]
             ]
         );
-
+        
+        
         $banner_image = MediaFile::findMediaByName("banner-search")->id;
         $icon_about_1 = MediaFile::findMediaByName("ico_localguide")->id;
         $icon_about_2 = MediaFile::findMediaByName("ico_adventurous")->id;

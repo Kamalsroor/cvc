@@ -24,6 +24,21 @@
                         <input type="text" class="form-control" name="date_format" value="{{$settings['date_format'] ?? 'm/d/Y' }}">
                     </div>
                 </div>
+                <div class="form-group">
+                    <label >{{__("Phone")}}</label>
+                    <div class="form-controls">
+                        <input type="text" class="form-control" name="website_phone" value="{{$settings['website_phone'] ?? '' }}">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label >{{__("Address")}}</label>
+                    <div class="form-controls">
+                        <input type="text" class="form-control" name="company_address" value="{{$settings['company_address'] ?? '' }}">
+                    </div>
+                </div>
+
+                
+
             </div>
         </div>
     </div>
