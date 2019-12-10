@@ -17,15 +17,15 @@ class SendMailUserRegistered
     }
 
 
-    /**
-     * Build the message.
-     *
-     * @return $this
-     */
-    public function build()
-    {
-        return $this->view('emails')->with([
-            'email' => $this->user->email,
-        ]);
-    }
+    // /**
+    //  * Build the message.
+    //  *
+    //  * @return $this
+    //  */
+    // public function build()
+    // {
+    //     return $this->view('emails')->with([
+    //         'email' => $this->user->email,
+    //     ]);
+    // }
 }

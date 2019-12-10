@@ -225,18 +225,23 @@ class UserController extends FrontendController
             $user = \App\User::create([
                 'first_name'     => $request->input('first_name'),
                 'last_name'     => $request->input('last_name'),
+                'company_name'     => $request->input('company_name'),
+                'company_url'     => $request->input('company_url'),
+                'address'     => $request->input('address'),
+                'address2'     => $request->input('address2'),
+                'phone'     => $request->input('phone'),
+                'city'     => $request->input('city'),
                 'email'    => $request->input('email'),
                 'password' => Hash::make($request->input('password')),
-                'status'   => 'publish'
+                'status'   => 'Blocked'
             ]);
             Auth::loginUsingId($user->id);
-            try {
-                dd(event(new SendMailUserRegistered($user)));
-                // event(new SendMailUserRegisteredListen($user));
-            }catch (Exception $exception){
-                Log::warning("SendMailUserRegistered: ".$exception->getMessage());
-
-            }
+            // try {
+            //     event(new SendMailUserRegistered($user));
+            //     // event(new SendMailUserRegisteredListen($user));
+            // }catch (Exception $exception){
+            //     Log::warning("SendMailUserRegistered: ".$exception->getMessage());
+            // }
             $user->assignRole('customer');
             return response()->json([
                 'error'    => false,

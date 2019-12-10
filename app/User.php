@@ -36,9 +36,12 @@ class User extends Authenticatable
         'city',
         'state',
         'country',
+        'company_name',
+        'company_url',
         'zip_code',
         'last_login_at',
         'avatar_id',
+        'status',
         'bio',
     ];
 
