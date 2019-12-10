@@ -4,7 +4,7 @@ namespace Modules\User\Controllers;
 use Illuminate\Support\Facades\Log;
 use Matrix\Exception;
 use Modules\FrontendController;
-use Modules\User\Listeners\SendMailUserRegisteredListen;
+use Modules\User\Events\SendMailUserRegistered;
 use Modules\User\Models\Newsletter;
 use Modules\User\Models\Subscriber;
 use Modules\User\Models\User;
@@ -231,7 +231,7 @@ class UserController extends FrontendController
             ]);
             Auth::loginUsingId($user->id);
             try {
-                dd(event(new SendMailUserRegisteredListen($user)));
+                dd(event(new SendMailUserRegistered($user)));
                 // event(new SendMailUserRegisteredListen($user));
             }catch (Exception $exception){
                 Log::warning("SendMailUserRegistered: ".$exception->getMessage());
