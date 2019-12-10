@@ -230,7 +230,7 @@ class UserController extends AdminController
             }
         } else {
             foreach ($ids as $id) {
-                $user = User::where("id", $id)->get();
+                $user = User::where("id", $id)->first();
                 try {
                     event(new SendMailUserRegistered($user));
                     $user->update(['status' => $action]);
