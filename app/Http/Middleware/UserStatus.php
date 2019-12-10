@@ -23,7 +23,7 @@ class UserStatus
                 case "blocked":
                     Auth::guard()->logout();
                     $request->session()->invalidate();
-                    return redirect('login')->with('error', 'Your account has been blocked');
+                    return redirect('login')->with('error', 'Your account has been Not Active');
                     break;
                 case "deleted":
                     Auth::guard()->logout();

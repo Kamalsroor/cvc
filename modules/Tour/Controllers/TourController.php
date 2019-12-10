@@ -16,7 +16,7 @@ class TourController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware(['auth','user_status']);
     }
 
     public function index(Request $request)

@@ -13,6 +13,7 @@ use App\Http\Middleware\InitConfigsFromDatabase;
 use App\Http\Middleware\RedirectIfAuthenticated;
 use App\Http\Middleware\RedirectToInstaller;
 use App\Http\Middleware\TranslationManager;
+use App\Http\Middleware\UserStatus;
 use App\Http\Middleware\TrimStrings;
 use App\Http\Middleware\TrustProxies;
 use App\Http\Middleware\VerifyCsrfToken;
@@ -101,7 +102,8 @@ class Kernel extends HttpKernel
 
         "dashboard" => Dashboard::class,
         "translation_manager" => TranslationManager::class,
-
+        "user_status" => UserStatus::class,
+        
         "system_log_view" => CheckForLogPermission::class,
     ];
 
