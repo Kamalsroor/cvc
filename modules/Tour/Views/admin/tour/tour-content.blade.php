@@ -62,6 +62,14 @@
         </div>
 
         <div class="form-group">
+            <label class="control-label">{{__("Package Includes")}}</label>
+            <div class="">
+                <textarea name="package_includes" class="d-none has-ckeditor" cols="30" rows="10">{{$row->package_includes}}</textarea>
+            </div>
+        </div>
+
+
+        <div class="form-group">
             <label class="control-label">{{__("Package Excludes")}}</label>
             <div class="">
                 <textarea name="package_excludes" class="d-none has-ckeditor" cols="30" rows="10">{{$row->package_excludes}}</textarea>
