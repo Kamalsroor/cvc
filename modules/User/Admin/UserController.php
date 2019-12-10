@@ -2,13 +2,15 @@
 namespace Modules\User\Admin;
 
 use App\User;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Modules\AdminController;
 use Spatie\Permission\Models\Role;
-
+use Matrix\Exception;
+use Modules\User\Events\SendMailUserRegistered;
 class UserController extends AdminController
 {
     public function __construct()
@@ -228,7 +230,14 @@ class UserController extends AdminController
             }
         } else {
             foreach ($ids as $id) {
-                User::where("id", $id)->update(['status' => $action]);
+                $user = User::where("id", $id)->get();
+                try {
+                    event(new SendMailUserRegistered($user));
+                    $user->update(['status' => $action]);
+                    // event(new SendMailUserRegisteredListen($user));
+                }catch (Exception $exception){
+                    Log::warning("SendMailUserRegistered: ".$exception->getMessage());
+                }
             }
         }
         return redirect()->back()->with('success', __('Updated successfully!'));
