@@ -51,16 +51,16 @@
     <div class="row">
         <div class="col-lg-6 col-md-12">
             <div class="form-group">
-                <input type="text" class="form-control" name="address2" autocomplete="off" placeholder="{{__("Address 2")}}">
+                <input type="text" class="form-control" name="address" autocomplete="off" placeholder="{{__("Address")}}">
                 <i class="input-icon field-icon fa"><img src="{{url('images/ico_fullname_signup.svg')}}"></i>
-                <span class="invalid-feedback error error-address2"></span>
+                <span class="invalid-feedback error error-address"></span>
             </div>
         </div>
         <div class="col-lg-6 col-md-12">
             <div class="form-group">
-                <input type="text" class="form-control" name="address" autocomplete="off" placeholder="{{__("Address")}}">
+                <input type="text" class="form-control" name="address2" autocomplete="off" placeholder="{{__("Address 2")}}">
                 <i class="input-icon field-icon fa"><img src="{{url('images/ico_fullname_signup.svg')}}"></i>
-                <span class="invalid-feedback error error-address"></span>
+                <span class="invalid-feedback error error-address2"></span>
             </div>
         </div>
     </div>
