@@ -54,4 +54,17 @@ class Text extends BaseBlock
     {
         return __('Text');
     }
+
+
+    // public function content($model = [])
+    // {
+    //     $data = [
+    //         'bg_image_url'  => '',
+    //     ];
+    //     $data = array_merge($model, $data);
+    //     if (!empty($model['bg_image'])) {
+    //         $data['bg_image_url'] = FileHelper::url($model['bg_image'], 'full');
+    //     }
+    //     return view('Tour::frontend.blocks.bannar-text.index', $data);
+    // }
 }
