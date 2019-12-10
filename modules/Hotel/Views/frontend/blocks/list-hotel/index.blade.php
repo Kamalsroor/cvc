@@ -1,6 +1,8 @@
 <div class="container">
     <div class="bravo-list-tour">
-
+        <div class="title">
+            {{$title}}
+        </div>
         <div class="list-item">
             @if($style_list === "normal")
                 <div class="row">
