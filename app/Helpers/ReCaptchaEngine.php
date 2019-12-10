@@ -44,7 +44,7 @@ class ReCaptchaEngine
                 validateCallback(){
 
                 }
-            }
+            };
 
             function BravoReCaptchaCallBack(){
                 BravoReCaptcha.callback();

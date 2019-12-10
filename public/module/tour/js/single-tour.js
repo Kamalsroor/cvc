@@ -200,7 +200,7 @@
     $(window).on("load", function () {
         var urlHash = window.location.href.split("#")[1];
         if (urlHash &&  $('.' + urlHash).length ){
-            var offset_other = 70
+            var offset_other = 70;
             if(urlHash === "review-list"){
                 offset_other = 330;
             }

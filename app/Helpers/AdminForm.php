@@ -1,6 +1,8 @@
 <?php
 namespace App\Helpers;
 
+use Modules\Media\Helpers\FileHelper;
+
 class AdminForm{
 
     public static function select($name,$options,$old = '',$class=''){
@@ -95,7 +97,7 @@ class AdminForm{
                             <label class="" ><?php echo e($option['label']) ?></label>
                             <div class="form-controls">
                                 <?php
-                                echo \Modules\Media\Helpers\FileHelper::fieldUpload($option['id'],$option['value'] ?? '');
+                                echo FileHelper::fieldUpload($option['id'],$option['value'] ?? '');
                                 ?>
                             </div>
                         </div>

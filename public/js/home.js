@@ -159,7 +159,7 @@ jQuery(function ($) {
                 }
             }
         });
-    })
+    });
     $('.bravo-form-register [type=submit]').click(function (e) {
         e.preventDefault();
         let form = $(this).closest('.bravo-form-register');
@@ -214,10 +214,10 @@ jQuery(function ($) {
                 }
 			}
         });
-    })
+    });
     $('#register').on('show.bs.modal', function (event) {
         $('#login').modal('hide')
-    })
+    });
     $('#login').on('show.bs.modal', function (event) {
         $('#register').modal('hide')
     });
@@ -280,7 +280,7 @@ jQuery(function ($) {
     });
     $(document).on("click",".bravo-effect-bg",function () {
         $(".bravo-more-menu").trigger('bravo-trigger-menu-mobile');
-    })
+    });
     $(document).on("bravo-trigger-menu-mobile",".bravo-more-menu",function () {
         $(this).toggleClass('active');
         if($(this).hasClass('active')){

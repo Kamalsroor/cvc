@@ -2,7 +2,7 @@
     <div class="sidebar-title"><h4>{{ $item->title }}</h4></div>
     <div class="tagcloud">
         @php
-            $list_tags = $model_tag->limit(20)->get();
+            $list_tags = $model_tag->limit(20)->get()
         @endphp
         <ul>
             @if($list_tags)

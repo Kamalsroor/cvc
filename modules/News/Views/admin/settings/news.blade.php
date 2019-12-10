@@ -46,7 +46,7 @@
                                 {!! \Modules\Media\Helpers\FileHelper::fieldUpload('news_page_list_seo_image', $settings['news_page_list_seo_image'] ?? "" ) !!}
                             </div>
                         </div>
-                        @php $seo_share = !empty($settings['news_page_list_seo_share']) ? json_decode($settings['news_page_list_seo_share'],true): false; @endphp
+                        @php $seo_share = !empty($settings['news_page_list_seo_share']) ? json_decode($settings['news_page_list_seo_share'],true): false @endphp
                         <div class="tab-pane" id="seo_2">
                             <div class="form-group">
                                 <label class="control-label">{{__("Facebook Title")}}</label>

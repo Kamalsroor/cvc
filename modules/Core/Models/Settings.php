@@ -2,9 +2,12 @@
 namespace Modules\Core\Models;
 
 use App\BaseModel;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
+use Modules\Booking\SettingClass;
 use mysql_xdevapi\Schema;
+use Nwidart\Modules\Facades\Module;
 
 class Settings extends BaseModel
 {
@@ -70,10 +73,10 @@ class Settings extends BaseModel
         $all = array_merge($all,\Modules\Tour\SettingClass::getSettingPages());
         $all = array_merge($all,\Modules\User\SettingClass::getSettingPages());
         $all = array_merge($all,\Modules\News\SettingClass::getSettingPages());
-        $all = array_merge($all,\Modules\Booking\SettingClass::getSettingPages());
+        $all = array_merge($all, SettingClass::getSettingPages());
 
         // Get All Plugins Menu
-        $plugins = \Nwidart\Modules\Facades\Module::allEnabled();
+        $plugins = Module::allEnabled();
         foreach ($plugins as $plugin){
             $setting_class = config($plugin->getLowerName().'.setting_class');
             if(class_exists($setting_class) and method_exists($setting_class,'getSettingPages'))
@@ -83,7 +86,7 @@ class Settings extends BaseModel
         }
 
         //@todo Sort items by Position
-        $all = array_values(\Illuminate\Support\Arr::sort($all, function ($value) {
+        $all = array_values(Arr::sort($all, function ($value) {
             return $value['position'] ?? 0;
         }));
 

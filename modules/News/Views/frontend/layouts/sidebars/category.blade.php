@@ -3,7 +3,7 @@
         <h4>{{ $item->title }}</h4>
     </div>
     @php
-        $list_category = $model_category->get()->toTree();
+        $list_category = $model_category->get()->toTree()
     @endphp
     <ul>
         <?php

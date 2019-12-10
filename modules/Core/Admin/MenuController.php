@@ -4,8 +4,13 @@ namespace Modules\Core\Admin;
 use Illuminate\Http\Request;
 use Modules\AdminController;
 use Modules\Core\Models\Menu;
+use Modules\Location\Models\Location;
+use Modules\News\Models\News;
 use Modules\News\Models\NewsCategory;
+use Modules\Page\Models\Page;
 use Modules\Page\Models\Template;
+use Modules\Tour\Models\Tour;
+use Modules\Tour\Models\TourCategory;
 
 class MenuController extends AdminController
 {
@@ -116,29 +121,29 @@ class MenuController extends AdminController
     {
         $menuModels = [
             [
-                'class' => \Modules\Page\Models\Page::class,
+                'class' => Page::class,
                 'name'  => __("Page"),
-                'items' => \Modules\Page\Models\Page::searchForMenu()
+                'items' => Page::searchForMenu()
             ],
             [
-                'class' => \Modules\Tour\Models\Tour::class,
+                'class' => Tour::class,
                 'name'  => __("Tour"),
-                'items' => \Modules\Tour\Models\Tour::searchForMenu()
+                'items' => Tour::searchForMenu()
             ],
             [
-                'class' => \Modules\Tour\Models\TourCategory::class,
+                'class' => TourCategory::class,
                 'name'  => __("Tour Category"),
-                'items' => \Modules\Tour\Models\TourCategory::searchForMenu()
+                'items' => TourCategory::searchForMenu()
             ],
             [
-                'class' => \Modules\Location\Models\Location::class,
+                'class' => Location::class,
                 'name'  => __("Location"),
-                'items' => \Modules\Location\Models\Location::searchForMenu()
+                'items' => Location::searchForMenu()
             ],
             [
-                'class' => \Modules\News\Models\News::class,
+                'class' => News::class,
                 'name'  => __("News"),
-                'items' => \Modules\News\Models\News::searchForMenu()
+                'items' => News::searchForMenu()
             ],
             [
                 'class' => NewsCategory::class,

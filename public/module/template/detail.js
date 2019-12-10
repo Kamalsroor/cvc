@@ -187,9 +187,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
 var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
+  var _vm = this;
+  var _h = _vm.$createElement;
+  var _c = _vm._self._c || _h;
   return _c(
     "div",
     {
@@ -223,9 +223,9 @@ var render = function() {
                         return o.selected
                       })
                       .map(function(o) {
-                        var val = "_value" in o ? o._value : o.value
+                        var val = "_value" in o ? o._value : o.value;
                         return val
-                      })
+                      });
                     _vm.$set(
                       _vm.item.settings,
                       "size",
@@ -301,17 +301,17 @@ var render = function() {
       ])
     ]
   )
-}
+};
 var staticRenderFns = [
   function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
+    var _vm = this;
+    var _h = _vm.$createElement;
+    var _c = _vm._self._c || _h;
     return _c("a", { attrs: { href: "#", "data-toggle": "dropdown" } }, [
       _c("i", { staticClass: "icon ion-ios-hammer" })
     ])
   }
-]
+];
 render._withStripped = true
 
 
@@ -330,9 +330,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
 var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
+  var _vm = this;
+  var _h = _vm.$createElement;
+  var _c = _vm._self._c || _h;
   return _c("div", { staticClass: "block-panel" }, [
     _c("div", { staticClass: "block-title" }, [
       _vm._v("\n        " + _vm._s(_vm.item.name) + "\n        "),
@@ -357,8 +357,8 @@ var render = function() {
       ])
     ])
   ])
-}
-var staticRenderFns = []
+};
+var staticRenderFns = [];
 render._withStripped = true
 
 
@@ -377,9 +377,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
 var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
+  var _vm = this;
+  var _h = _vm.$createElement;
+  var _c = _vm._self._c || _h;
   return _c("div", { staticClass: "block-panel" }, [
     _c("div", { staticClass: "block-title" }, [
       _vm._v("\n        " + _vm._s(_vm.item.name) + "\n        "),
@@ -430,12 +430,12 @@ var render = function() {
       ]
     )
   ])
-}
+};
 var staticRenderFns = [
   function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
+    var _vm = this;
+    var _h = _vm.$createElement;
+    var _c = _vm._self._c || _h;
     return _c(
       "span",
       { staticClass: "btn btn-light block-delete show-hover" },
@@ -443,14 +443,14 @@ var staticRenderFns = [
     )
   },
   function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
+    var _vm = this;
+    var _h = _vm.$createElement;
+    var _c = _vm._self._c || _h;
     return _c("span", { staticClass: "block-edit btn btn-light show-hover" }, [
       _c("i", { staticClass: "icon ion-ios-build" })
     ])
   }
-]
+];
 render._withStripped = true
 
 
@@ -469,9 +469,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
 var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
+  var _vm = this;
+  var _h = _vm.$createElement;
+  var _c = _vm._self._c || _h;
   return _c(
     "div",
     {},
@@ -489,8 +489,8 @@ var render = function() {
     ],
     1
   )
-}
-var staticRenderFns = []
+};
+var staticRenderFns = [];
 render._withStripped = true
 
 
@@ -525,11 +525,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   null,
   null
   
-)
+);
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/module/template/admin/components/column.vue"
+component.options.__file = "resources/module/template/admin/components/column.vue";
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
@@ -594,11 +594,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   null,
   null
   
-)
+);
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/module/template/admin/components/regular.vue"
+component.options.__file = "resources/module/template/admin/components/regular.vue";
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
@@ -663,11 +663,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   null,
   null
   
-)
+);
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/module/template/admin/components/row.vue"
+component.options.__file = "resources/module/template/admin/components/row.vue";
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
@@ -953,11 +953,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   null,
   null
   
-)
+);
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/module/template/admin/fields/field-editor.vue"
+component.options.__file = "resources/module/template/admin/fields/field-editor.vue";
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),

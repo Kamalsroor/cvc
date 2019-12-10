@@ -39,7 +39,7 @@ jQuery(function ($) {
 	});
 	$('.btn-apply-advances').click(function(){
 		$('#advance_filters').addClass('d-none');
-	})
+	});
 
 	function reloadForm(){
 		$('.map_loading').show();

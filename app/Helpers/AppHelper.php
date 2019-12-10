@@ -1,7 +1,13 @@
 <?php
+
+use App\Helpers\ReCaptchaEngine;
+use Modules\Core\Models\Menu;
 use Modules\Core\Models\Settings;
 use App\Currency;
 use Carbon\Carbon;
+use Modules\Core\Walkers\MenuWalker;
+use Modules\Media\Helpers\FileHelper;
+use Modules\Page\Models\Page;
 
 define( 'MINUTE_IN_SECONDS', 60 );
 define( 'HOUR_IN_SECONDS', 60 * MINUTE_IN_SECONDS );
@@ -56,7 +62,7 @@ function generate_menu($location = '',$options = [])
     {
         foreach($setting as $l=>$menuId){
             if($l == $location and $menuId){
-                $menu = \Modules\Core\Models\Menu::find($menuId);
+                $menu = Menu::find($menuId);
                 $walker = new $options['walker']($menu);
 
                 if(!empty($menu)){
@@ -68,7 +74,7 @@ function generate_menu($location = '',$options = [])
 }
 
 function set_active_menu($item){
-    \Modules\Core\Walkers\MenuWalker::setCurrentMenuItem($item);
+    MenuWalker::setCurrentMenuItem($item);
 }
 
  function get_exceprt($string,$length=200){
@@ -91,13 +97,13 @@ function set_active_menu($item){
 }
 
 function getDatefomat($value) {
-    return \Carbon\Carbon::parse($value)->format('j F, Y');
+    return Carbon::parse($value)->format('j F, Y');
 
 }
 
 function get_file_url($file_id,$size="thumb"){
     if(empty($file_id)) return false;
-    return \Modules\Media\Helpers\FileHelper::url($file_id,$size);
+    return FileHelper::url($file_id,$size);
 }
 
 function get_image_tag($image_id,$size = 'thumb',$options = []){
@@ -554,7 +560,7 @@ function get_country_name($name){
 
 function get_page_url($page_id)
 {
-    $page = \Modules\Page\Models\Page::find($page_id);
+    $page = Page::find($page_id);
 
     if($page){
         return $page->getDetailUrl();
@@ -578,5 +584,5 @@ function get_payment_gateway_obj($payment_gateway){
 }
 
 function recaptcha_field($action){
-    return \App\Helpers\ReCaptchaEngine::captcha($action);
+    return ReCaptchaEngine::captcha($action);
 }

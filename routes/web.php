@@ -47,12 +47,12 @@ Route::group(['prefix'=>config('tour.tour_route_prefix')],function(){
 
 // Location
 Route::group(['prefix'=>config('location.location_route_prefix')],function(){
-    Route::get('/{slug}','\Modules\Location\Controllers\LocationController@detail')->name("location.detail");;// Detail
+    Route::get('/{slug}','\Modules\Location\Controllers\LocationController@detail')->name("location.detail");// Detail
 });
 
 Route::group(['prefix'=>config('hotel.hotel_route_prefix')],function(){
     Route::get('/','\Modules\Hotel\Controllers\HotelController@index')->name('hotel.search'); // Search
-    Route::get('/{slug}','\Modules\Hotel\Controllers\HotelController@detail')->name("hotel.detail");;// Detail
+    Route::get('/{slug}','\Modules\Hotel\Controllers\HotelController@detail')->name("hotel.detail");// Detail
 });
 
 // News

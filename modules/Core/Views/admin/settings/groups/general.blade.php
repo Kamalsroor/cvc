@@ -43,7 +43,7 @@
                         <select name="site_locale" class="form-control">
                             <option value="">{{__("-- Default --")}}</option>
                             @php
-                                $langs = \Modules\Language\Models\Language::getActive();
+                                use Modules\Language\Models\Language;$langs = Language::getActive()
                             @endphp
 
                             @foreach($langs as $lang)
@@ -100,9 +100,9 @@
                     <label >{{__("Page for Homepage")}}</label>
                     <div class="form-controls">
                         <?php
-                            $template = !empty($settings['home_page_id']) ? \Modules\Page\Models\Page::find($settings['home_page_id'] ) : false;
+                        use App\Helpers\AdminForm;use Modules\Page\Models\Page;$template = !empty($settings['home_page_id']) ? Page::find($settings['home_page_id'] ) : false;
 
-                            \App\Helpers\AdminForm::select2('home_page_id',[
+                            AdminForm::select2('home_page_id',[
                             'configs'=>[
                                     'ajax'=>[
                                         'url'=>url('/admin/module/page/getForSelect2'),

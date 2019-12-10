@@ -2,6 +2,8 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Debugbar;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class HideDebugbar
@@ -9,8 +11,8 @@ class HideDebugbar
     /**
      * Handle an incoming request.
      *
-     * @param  \Illuminate\Http\Request $request
-     * @param  \Closure $next
+     * @param  Request $request
+     * @param Closure $next
      * @param  string|null $guard
      * @return mixed
      */
@@ -19,7 +21,7 @@ class HideDebugbar
         if(strpos($request->path(),'install') === false){
 
             if (!Auth::user() || !Auth::user()->hasPermissionTo('system_log_view')) {
-                \Debugbar::disable();
+                Debugbar::disable();
             }
         }
         return $next($request);

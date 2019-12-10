@@ -35,7 +35,7 @@ window.bravo_format_money =  function($money) {
     }
 
     return $money_string;
-}
+};
 
 window.bravo_number_format = function (number, decimals, dec_point, thousands_sep) {
 
@@ -65,7 +65,7 @@ window.bravo_number_format = function (number, decimals, dec_point, thousands_se
             .join('0');
     }
     return s.join(dec);
-}
+};
 
 window.bravo_handle_error_response = function(e){
     switch (e.status) {

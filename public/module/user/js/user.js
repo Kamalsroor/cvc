@@ -90,7 +90,7 @@ jQuery(function ($) {
     $('.dungdt-upload-box .delete').click(function (e) {
         e.preventDefault();
         let p = $(this).closest('.dungdt-upload-box');
-        p.find("input").attr('value','')
+        p.find("input").attr('value','');
         p.removeClass("active");
     });
     $('.dungdt-upload-multiple').find('.btn-field-upload').click(function () {
