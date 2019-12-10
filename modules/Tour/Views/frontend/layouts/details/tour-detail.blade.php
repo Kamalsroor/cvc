@@ -123,6 +123,7 @@
                 <div class="nav nav-tabs nav-fill " id="nav-tab" role="tablist">
                 <a class="nav-item nav-link active" id="nav-overview-tab" data-toggle="tab" href="#nav-overview" role="tab" aria-controls="nav-overview" aria-selected="true">{{__("Overview")}}</a>
                 <a class="nav-item nav-link" id="nav-Itinerary-tab" data-toggle="tab" href="#nav-Itinerary" role="tab" aria-controls="nav-Itinerary" aria-selected="true">{{__("Itinerary")}}</a>
+                <a class="nav-item nav-link" id="nav-package_includes-tab" data-toggle="tab" href="#nav-package_includes" role="tab" aria-controls="nav-package_includes" aria-selected="true">{{__("Package Includes")}}</a>
                 <a class="nav-item nav-link" id="nav-package_excludes-tab" data-toggle="tab" href="#nav-package_excludes" role="tab" aria-controls="nav-package_excludes" aria-selected="true">{{__("Package Excludes")}}</a>
                 <a class="nav-item nav-link" id="nav-dates_rates-tab" data-toggle="tab" href="#nav-dates_rates" role="tab" aria-controls="nav-dates_rates" aria-selected="true">{{__("dates&rates")}}</a>
                 </div>
@@ -151,14 +152,16 @@
                         </div>
                     </div>
                 @endif
-
+                <div class="tab-pane fade" id="nav-package_includes" role="tabpanel" aria-labelledby="nav-package_includes-tab">
+                    {!!  $row->package_includes !!}
+                </div>
                 <div class="tab-pane fade" id="nav-package_excludes" role="tabpanel" aria-labelledby="nav-package_excludes-tab">
                     {!!  $row->package_excludes !!}
                 </div>
                 <div class="tab-pane fade" id="nav-dates_rates" role="tabpanel" aria-labelledby="nav-dates_rates-tab">
                     {!!  $row->dates_rates !!}
                 </div>
-        
+                
             </div>
         </div>
     </div>
