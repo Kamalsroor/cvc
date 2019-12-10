@@ -53,8 +53,9 @@
                             <th>{{__('Email')}}</th>
                             <th>{{__('Phone')}}</th>
                             <th>{{__('Role')}}</th>
+                            {{-- <th>{{__('Status')}}</th> --}}
                             <th class="date">{{ __('Date')}}</th>
-{{--                            <th class="status">{{__('Status')}}</th>--}}
+                           <th class="status">{{__('Status')}}</th>
                             <th></th>
                         </tr>
                         </thead>
@@ -75,7 +76,7 @@
                                     @endphp
                                 </td>
                                 <td>{{ display_date($row->created_at)}}</td>
-                                {{--<td class="status">{{$row->status}}</td>--}}
+                                <td class="status">{{$row->status}}</td>
                                 <td>
                                     <a class="btn btn-sm btn-primary" href="{{url('admin/module/user/password/'.$row->id)}}">{{__('Change Password')}}</a>
                                 </td>
