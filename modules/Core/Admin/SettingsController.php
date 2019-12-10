@@ -69,6 +69,7 @@ class SettingsController extends AdminController
                     'home_page_id',
                     'website_phone',
                     'company_address',
+                    'contact_img',
                     'social_share',
                     'logo_id',
                     'footer_text_left',

@@ -43,9 +43,12 @@
 				<div class="offset-md-2 col-md-5">
 					<div class="contact-info">
 						<div class="info-bg">
-							<img src="https://tomap.travelerwp.com/wp-content/uploads/2018/12/bg-contact-1.jpg" class="img-responsive" alt="Background Contact Info">    </div>
+								@if($contact_img = setting_item("contact_img"))
+								
+								<img src="{!! get_file_url($contact_img,'full')  !!}" class="img-responsive" alt="Background Contact Info">    </div>
+								 @endif
 						<div class="info-content">
-							<h3>{{ __('Traveler Ltd') }}</h3>
+							<h3>{!! setting_item("site_title") ?? ''  !!}</h3>
 							<div class="sub">
 								<p></p>
 								<p>{{ __('Tell. ')  }} {!! setting_item("website_phone") ?? ''  !!}</p>

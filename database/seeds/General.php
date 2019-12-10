@@ -75,7 +75,13 @@ class General extends Seeder
                     'name' => 'company_address',
                     'val' => 'address',
                     'group' => "general",
-                ]
+                ],
+                [
+                    'name' => 'contact_img',
+                    'val' => '',
+                    'group' => "general",
+                ],
+                
             ]
         );
         

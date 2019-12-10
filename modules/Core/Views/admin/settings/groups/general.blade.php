@@ -36,7 +36,12 @@
                         <input type="text" class="form-control" name="company_address" value="{{$settings['company_address'] ?? '' }}">
                     </div>
                 </div>
-
+                <div class="form-group">
+                    <label >{{__("Contact Img")}}</label>
+                    <div class="form-controls form-group-image">
+                        {!! \Modules\Media\Helpers\FileHelper::fieldUpload('contact_img',$settings['contact_img'] ?? '') !!}
+                    </div>
+                </div>
                 
 
             </div>
@@ -149,6 +154,8 @@
                         {!! \Modules\Media\Helpers\FileHelper::fieldUpload('logo_id',$settings['logo_id'] ?? '') !!}
                     </div>
                 </div>
+
+                
                 <div class="form-group">
                     <label>{{__("Social share")}}</label>
                     <div class="form-controls">
