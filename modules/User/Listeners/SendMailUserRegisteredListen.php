@@ -19,6 +19,12 @@
         const CODE = [
             'first_name' => '[first_name]',
             'last_name'  => '[last_name]',
+            'company_name'  => '[company_name]',
+            'company_url'  => '[company_url]',
+            'address'  => '[address]',
+            'address2'  => '[address2]',
+            'phone'  => '[phone]',
+            'city'  => '[city]',
             'name'       => '[name]',
             'email'      => '[email]',
         ];
