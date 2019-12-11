@@ -7,6 +7,7 @@
                         <?php $logo = get_file_url($logo_id,'full') ?>
                         <img src="{{$logo}}" width="135"  alt="{{setting_item("site_title")}}">
                     @endif
+                    
                 </a>
                 <div class="bravo-menu">
                     <?php generate_menu('primary') ?>
