@@ -22,7 +22,7 @@
             </div>
         </div> --}}
         <div class="container">
-            <h1>{{__("content")}}</h1>
+            <h1>{{$location->name}}</h1>
             {!! $location->content !!}
 
             
