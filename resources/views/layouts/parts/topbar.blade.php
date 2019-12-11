@@ -12,7 +12,8 @@
                         @endforeach
                     </div>
                 @endif
-                @if($admin_email = setting_item("admin_email"))
+                
+                @if($admin_email = setting_item("email_from_address"))
                     <ul class="topbar-items">
                         <li class="hidden-xs hidden-sm"><a href="mailto:{{$admin_email}}" target="">{{$admin_email}}</a>
                         </li>
