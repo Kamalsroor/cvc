@@ -202,7 +202,8 @@
     </script>
     <script>
         gapi.analytics.ready(function() {
-        
+          var CLIENT_ID = '714114358061-eehmcmn2j84sumfapg6ddqpea0s2m0gu.apps.googleusercontent.com';
+
           /**
            * Authorize the user immediately if the user has already granted access.
            * If no access has been created, render an authorize button inside the
@@ -210,7 +211,7 @@
            */
           gapi.analytics.auth.authorize({
             container: 'embed-api-auth-container',
-            clientid: 'REPLACE WITH YOUR CLIENT ID'
+            clientid: CLIENT_ID
           });
         
         
