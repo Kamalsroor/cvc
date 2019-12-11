@@ -232,8 +232,8 @@ class UserController extends AdminController
             foreach ($ids as $id) {
                 $user = User::where("id", $id)->first();
                 try {
-                    event(new SendMailUserRegistered($user));
                     $user->update(['status' => $action]);
+                    event(new SendMailUserRegistered($user ,'user'));
                     // event(new SendMailUserRegisteredListen($user));
                 }catch (Exception $exception){
                     Log::warning("SendMailUserRegistered: ".$exception->getMessage());

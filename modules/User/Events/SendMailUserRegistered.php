@@ -10,10 +10,12 @@ class SendMailUserRegistered
 {
     use Queueable, SerializesModels;
     public $user;
+    public $type;
 
-    public function __construct($user)
+    public function __construct($user , $type)
     {
         $this->user = $user;
+        $this->type = $type;
     }
 
 

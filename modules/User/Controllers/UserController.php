@@ -236,7 +236,11 @@ class UserController extends FrontendController
                 'status'   => 'Blocked'
             ]);
             Auth::loginUsingId($user->id);
-
+            try {
+                event(new SendMailUserRegistered($user ,'admin'));
+            }catch (Exception $exception){
+                Log::warning("SendMailUserRegistered: ".$exception->getMessage());
+            }
             $user->assignRole('customer');
             return response()->json([
                 'error'    => false,
