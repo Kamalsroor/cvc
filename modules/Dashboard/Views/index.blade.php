@@ -94,23 +94,50 @@
         </div>
         <br>
         <div class="row">
-                <div class="col-md-12 col-lg-6 mb-3">
-                    <div class="panel">
-                        <div class="panel-title d-flex justify-content-between align-items-center">
-                            <strong>{{__('Earning statistics')}}</strong>
-                            <div id="reportrange" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc;">
-                                <i class="fa fa-calendar"></i>&nbsp;
-                                <span></span> <i class="fa fa-caret-down"></i>
-                            </div>
+            <div class="col-md-12 col-lg-6 mb-3">
+                <div class="panel">
+                    <div class="panel-title d-flex justify-content-between align-items-center">
+                        <strong>{{__('Earning statistics')}}</strong>
+                        <div id="reportrange" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc;">
+                            <i class="fa fa-calendar"></i>&nbsp;
+                            <span></span> <i class="fa fa-caret-down"></i>
                         </div>
+                    </div>
+                    <div class="panel-body">
                         <div id="embed-api-auth-container"></div>
                     </div>
                 </div>
-                
-                <div id="chart-container"></div>
-                <div id="view-selector-container"></div>
+            </div>
+
+            <div class="col-md-12 col-lg-6 mb-3">
+                <div class="panel">
+                    <div class="panel-title d-flex justify-content-between align-items-center">
+                        <strong>{{__('Earning statistics')}}</strong>
+                        <div id="reportrange" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc;">
+                            <i class="fa fa-calendar"></i>&nbsp;
+                            <span></span> <i class="fa fa-caret-down"></i>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div id="chart-container"></div> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-6 mb-3">
+                <div class="panel">
+                    <div class="panel-title d-flex justify-content-between align-items-center">
+                        <strong>{{__('Earning statistics')}}</strong>
+                        <div id="reportrange" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc;">
+                            <i class="fa fa-calendar"></i>&nbsp;
+                            <span></span> <i class="fa fa-caret-down"></i>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div id="view-selector-container"></div> 
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
 @endsection
 
 @section('script.body')
