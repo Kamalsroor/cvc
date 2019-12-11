@@ -307,7 +307,7 @@
                'max-results': 7
             },
             chart: {
-              container: 'chart-container',
+              container: 'chart-2-container',
               type: 'PIE',
               options: {
                 width: '100%',
