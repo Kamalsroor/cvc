@@ -134,6 +134,7 @@
                         </div>
                     </div>
                     <div class="panel-body">
+                            <div id="chart-2-container"></div>
                     </div>
                 </div>
             </div>
@@ -266,6 +267,34 @@
           viewSelector.execute();
         
         
+
+        /**
+        * Creates a new DataChart instance showing top 5 most popular demos/tools
+        * amongst returning users only.
+        * It will be rendered inside an element with the id "chart-3-container".
+        */
+        var dataChart2 = new gapi.analytics.googleCharts.DataChart({
+            query: {
+            'ids': 'ga:100367422', // <-- Replace with the ids value for your view.
+            'start-date': '30daysAgo',
+            'end-date': 'yesterday',
+            'metrics': 'ga:pageviews',
+            'dimensions': 'ga:pagePathLevel1',
+            'sort': '-ga:pageviews',
+            'filters': 'ga:pagePathLevel1!=/',
+            'max-results': 7
+            },
+            chart: {
+            'container': 'chart-2-container',
+            'type': 'PIE',
+            'options': {
+                'width': '100%',
+                'pieHole': 4/9,
+            }
+            }
+        });
+        dataChart2.execute();
+
           /**
            * Create a new DataChart instance with the given query parameters
            * and Google chart options. It will be rendered inside an element
