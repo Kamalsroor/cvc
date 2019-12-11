@@ -268,31 +268,53 @@
         
         
 
-        /**
-        * Creates a new DataChart instance showing top 5 most popular demos/tools
-        * amongst returning users only.
-        * It will be rendered inside an element with the id "chart-3-container".
-        */
+        // /**
+        // * Creates a new DataChart instance showing top 5 most popular demos/tools
+        // * amongst returning users only.
+        // * It will be rendered inside an element with the id "chart-3-container".
+        // */
+        // var dataChart2 = new gapi.analytics.googleCharts.DataChart({
+        //     query: {
+        //     'start-date': '30daysAgo',
+        //     'end-date': 'yesterday',
+        //     'metrics': 'ga:pageviews',
+        //     'dimensions': 'ga:pagePathLevel1',
+        //     'sort': '-ga:pageviews',
+        //     'filters': 'ga:pagePathLevel1!=/',
+        //     'max-results': 7
+        //     },
+        //     chart: {
+        //     'container': 'chart-2-container',
+        //     'type': 'PIE',
+        //     'options': {
+        //         'width': '100%',
+        //         'pieHole': 4/9,
+        //     }
+        //     }
+        // });
+        // dataChart2.execute();
+
         var dataChart2 = new gapi.analytics.googleCharts.DataChart({
             query: {
-            'start-date': '30daysAgo',
-            'end-date': 'yesterday',
-            'metrics': 'ga:pageviews',
-            'dimensions': 'ga:pagePathLevel1',
-            'sort': '-ga:pageviews',
-            'filters': 'ga:pagePathLevel1!=/',
-            'max-results': 7
+              metrics: 'ga:sessions',
+              dimensions: 'ga:date',
+              'start-date': '30daysAgo',
+              'end-date': 'yesterday',
+              'metrics': 'ga:pageviews',
+            // 'dimensions': 'ga:pagePathLevel1',
+              'sort': '-ga:pageviews',
+               'filters': 'ga:pagePathLevel1!=/',
+               'max-results': 7
             },
             chart: {
-            'container': 'chart-2-container',
-            'type': 'PIE',
-            'options': {
-                'width': '100%',
-                'pieHole': 4/9,
+              container: 'chart-container',
+              type: 'PIE',
+              options: {
+                width: '100%',
+                pieHole: 4/9,
+              }
             }
-            }
-        });
-        dataChart2.execute();
+          });
 
           /**
            * Create a new DataChart instance with the given query parameters
@@ -314,6 +336,8 @@
               }
             }
           });
+
+          
         
         
           /**
