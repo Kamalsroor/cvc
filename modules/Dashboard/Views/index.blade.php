@@ -275,7 +275,6 @@
         */
         var dataChart2 = new gapi.analytics.googleCharts.DataChart({
             query: {
-            'ids': 'ga:100367422', // <-- Replace with the ids value for your view.
             'start-date': '30daysAgo',
             'end-date': 'yesterday',
             'metrics': 'ga:pageviews',
@@ -322,6 +321,7 @@
            */
           viewSelector.on('change', function(ids) {
             dataChart.set({query: {ids: ids}}).execute();
+            dataChart2.set({query: {ids: ids}}).execute();
           });
         
         });
