@@ -67,6 +67,7 @@
 
 <!-- Scripts -->
 
+<script src="{{ asset('libs/jquery-3.3.1.min.js') }}"></script>
 
 <script src="{{ asset('dist/admin/js/manifest.js') }}" ></script>
 <script src="{{ asset('dist/admin/js/vendor.js') }}" ></script>
