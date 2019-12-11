@@ -13,7 +13,7 @@ use Spatie\Sitemap\SitemapGenerator;
 */
 
 Route::get('get-site-map', function () {
-    dd(URL());
+    dd(url('/'));
     SitemapGenerator::create(URL())->writeToFile('sitemap.xml');
     return 'Site Map Created';
 });
