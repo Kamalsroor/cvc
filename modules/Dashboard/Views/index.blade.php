@@ -119,6 +119,7 @@
                         </div>
                     </div>
                     <div class="panel-body">
+                        <div id="view-selector-container"></div> 
                         <div id="chart-container"></div> 
                     </div>
                 </div>
@@ -133,7 +134,6 @@
                         </div>
                     </div>
                     <div class="panel-body">
-                        <div id="view-selector-container"></div> 
                     </div>
                 </div>
             </div>
