@@ -2,7 +2,7 @@
 $user = Auth::user();
 ?>
 <div class="header-logo flex-shrink-0">
-    <h3 class="logo-text"><a href="{{url('/admin')}}">Booking Core <span>{{config('app.version')}}</span></a></h3>
+    <h3 class="logo-text"><a href="{{url('/admin')}}">Cvc </a></h3>
 </div>
 <div class="header-widgets d-flex flex-grow-1">
     <div class="widgets-left d-flex flex-grow-1 align-items-center">
