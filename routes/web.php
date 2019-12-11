@@ -9,6 +9,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('get-site-map', function () {
+    SitemapGenerator::create(URL())->writeToFile('sitemap.xml');
+    return 'Site Map Created';
+});
+
 Route::get('/intro','LandingpageController@index');
 
 Route::get('/', 'HomeController@index');
