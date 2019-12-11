@@ -43,7 +43,7 @@
                 Mail::to($event->user->email)->send(new RegisteredEmail($event->user, $body, 'customer'));
             }
 
-            if (!empty(setting_item('admin_email') && !empty(setting_item('admin_enable_mail_user_registered')))) {
+            if (!empty(setting_item('admin_email')) && !empty(setting_item('admin_enable_mail_user_registered'))) {
                 $body = $this->replaceContentEmail($event, setting_item('admin_content_email_user_registered'));
                 Mail::to(setting_item('admin_email'))->send(new RegisteredEmail($event->user, $body, 'admin'));
             }

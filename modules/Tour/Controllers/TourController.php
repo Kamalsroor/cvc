@@ -77,7 +77,7 @@ class TourController extends Controller
         if (is_array($terms) && !empty($terms)) {
             $model_Tour->join('bravo_tour_term as tt', 'tt.tour_id', "bravo_tours.id")->whereIn('tt.term_id', $terms);
         }
-        $model_Tour->orderBy("order_num", "desc");
+        $model_Tour->orderBy("order_num");
         $model_Tour->groupBy("bravo_tours.id");
         $list = $model_Tour->with('location')->paginate(9);
         $markers = [];
