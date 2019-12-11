@@ -7,7 +7,7 @@
                         <div class="col-xs-12  col-md-7 col-lg-6">
                             <div class="media ">
                                 <div class="media-left hidden-xs">
-                                    <i class="icofont-island-alt"></i>
+                                    <i class="icofont-hill"></i>
                                 </div>
                                 <div class="media-body">
                                     <h4 class="media-heading">{{__("Get Updates & More")}}</h4>
