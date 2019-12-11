@@ -296,15 +296,13 @@
 
         var dataChart2 = new gapi.analytics.googleCharts.DataChart({
             query: {
-              metrics: 'ga:sessions',
-              dimensions: 'ga:date',
-              'start-date': '30daysAgo',
-              'end-date': 'yesterday',
-              'metrics': 'ga:pageviews',
-            // 'dimensions': 'ga:pagePathLevel1',
-              'sort': '-ga:pageviews',
-               'filters': 'ga:pagePathLevel1!=/',
-               'max-results': 7
+            'start-date': '30daysAgo',
+            'end-date': 'yesterday',
+            'metrics': 'ga:pageviews',
+            'dimensions': 'ga:pagePathLevel1',
+            'sort': '-ga:pageviews',
+            'filters': 'ga:pagePathLevel1!=/',
+            'max-results': 7
             },
             chart: {
               container: 'chart-2-container',
