@@ -1,4 +1,4 @@
-<div class="container text-center">
+<div class="container text-center pt-10" style="color: #9a9a9a;">
     <h3>
         {{ __('Ancient Pharonic Social Media')}}
     </h3>
