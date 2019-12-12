@@ -23,11 +23,7 @@
             </div>
         </div>
     @endif
-    <div class="container">
-        <h3>
-            {{ __('Ancient Pharonic Social Media')}}
-        </h3>
-    </div>
+
     @include('News::frontend.layouts.details.news-breadcrumb')
     <div class="bravo_content">
         <div class="container">
