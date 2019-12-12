@@ -1,3 +1,8 @@
+<div class="container">
+    <h3>
+        {{ __('Ancient Pharonic Social Media')}}
+    </h3>
+</div>
 @if(!empty($breadcrumbs))
     <div class="blog-breadcrumb hidden-xs">
         <div class="container">
