@@ -5,14 +5,14 @@
 @endsection
 @section('content')
     <div class="bravo_search_tour">
-        <div class="bravo_banner" @if($bg = setting_item("tour_page_search_banner")) style="background-image: url({{get_file_url($bg,'full')}})" @endif >
+        <div class="bravo_banner" @if($bg = setting_item("tour_page_search_banner")) style="background-image: url({{get_file_url($bg,'full')}});padding:200px 0 ;" @endif >
             <div class="container">
                 <h1>
                     {{setting_item("tour_page_search_title")}}
                 </h1>
             </div>
         </div>
-        <div class="bravo_form_search">
+        {{-- <div class="bravo_form_search">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-9 col-md-12">
@@ -20,7 +20,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <div class="container">
             <h1>{{__("content")}}</h1>
             {{-- {!! $location->content !!} --}}
