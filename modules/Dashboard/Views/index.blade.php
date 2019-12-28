@@ -138,6 +138,21 @@
                     </div>
                 </div>
             </div>
+            <div class="col-md-12 col-lg-6 mb-3">
+                <div class="panel">
+                    <div class="panel-title d-flex justify-content-between align-items-center">
+                        <strong>{{__('Earning statistics')}}</strong>
+                        <div id="reportrange" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc;">
+                            <i class="fa fa-calendar"></i>&nbsp;
+                            <span></span> <i class="fa fa-caret-down"></i>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                            <div id="chart-1-container"></div>
+                    </div>
+                </div>
+            </div>
+            
         </div>
 @endsection
 
@@ -293,6 +308,24 @@
         //     }
         // });
         // dataChart2.execute();
+        var dataChart1 = new gapi.analytics.googleCharts.DataChart({
+            query: {
+            metrics: 'ga:sessions',
+            dimensions: 'ga:country',
+            'start-date': '30daysAgo',
+            'end-date': 'yesterday',
+            'max-results': 6,
+            sort: '-ga:sessions'
+            },
+            chart: {
+            container: 'chart-1-container',
+            type: 'PIE',
+            options: {
+                width: '100%',
+                pieHole: 4/9
+            }
+            }
+        });
 
         var dataChart2 = new gapi.analytics.googleCharts.DataChart({
             query: {
@@ -343,6 +376,7 @@
            */
           viewSelector.on('change', function(ids) {
             dataChart.set({query: {ids: ids}}).execute();
+            dataChart2.set({query: {ids: ids}}).execute();
             dataChart2.set({query: {ids: ids}}).execute();
           });
         
