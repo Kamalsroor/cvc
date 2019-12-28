@@ -377,7 +377,7 @@
           viewSelector.on('change', function(ids) {
             dataChart.set({query: {ids: ids}}).execute();
             dataChart2.set({query: {ids: ids}}).execute();
-            dataChart2.set({query: {ids: ids}}).execute();
+            dataChart1.set({query: {ids: ids}}).execute();
           });
         
         });
