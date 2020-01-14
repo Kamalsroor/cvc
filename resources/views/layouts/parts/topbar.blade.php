@@ -72,14 +72,21 @@
     padding: 35px 25px;
     display: inline-block;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 200;
     text-transform: uppercase;
     color: #fff;
     transition: all .3s;
 }
+
 .bravo_wrap .bravo_topbar .content .topbar-right {
     font-size: 12px;
     padding: 10px;
+}
+.bravo_wrap .bravo_header .content .header-left .bravo-menu ul li>.menu-dropdown li a {
+    padding: 15px 0;
+    display: block;
+    font-size: 14px;
+    color: #888;
 }
 </style>
 
