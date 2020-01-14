@@ -63,7 +63,7 @@
 
 
 .bravo_wrap .bravo_topbar .content .topbar-items li a {
-    color: #999;
+    color: #666;
     font-weight: 400;
     font-size: 12px;
     text-decoration: none;
@@ -88,6 +88,11 @@
     font-size: 14px;
     color: #888;
 }
+
+.bravo_topbar .topbar-left .slogin{
+    display:inline-block;
+    font-weight:bolder
+}
 </style>
 
 <div class="bravo_topbar">
@@ -106,11 +111,9 @@
                 </a>
 
         
+                 <h5  class="slogin">  Your Luxury DMC in Egypt </h5>
             </div>
 
- <div >   
-                 <h5  class="slogin">  Your Luxury DMC in Egypt </h5>
-                                 </div>
             <div>
                 
 
