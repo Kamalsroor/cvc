@@ -1,14 +1,11 @@
+
+
+
 <div class="bravo_header">
     <div class="{{$container_class ?? 'container'}}">
         <div class="content">
             <div class="header-left">
-                <a href="{{url('/')}}" class="bravo-logo">
-                    @if($logo_id = setting_item("logo_id"))
-                        <?php $logo = get_file_url($logo_id,'full') ?>
-                        <img src="{{$logo}}" width="135"  alt="{{setting_item("site_title")}}">
-                    @endif
-                    
-                </a>
+
                 <div class="bravo-menu">
                     <?php generate_menu('primary') ?>
                 </div>
