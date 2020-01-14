@@ -69,9 +69,9 @@
     text-decoration: none;
 }
 .bravo_wrap .bravo_header .content .header-left .bravo-menu ul li a {
-    padding: 35px 25px;
+    padding: 35px 13px;
     display: inline-block;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 200;
     text-transform: uppercase;
     color: #fff;
@@ -101,6 +101,8 @@
                         <img src="{{$logo}}" width="135"  alt="{{setting_item("site_title")}}">
                     @endif
                     
+
+
                 </a>
 
         
