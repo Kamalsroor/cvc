@@ -91,7 +91,6 @@
 
 .bravo_topbar .topbar-left .slogin{
     display:inline-block;
-    font-weight:bolder
 }
 </style>
 
@@ -111,7 +110,7 @@
                 </a>
 
         
-                 <h5  class="slogin">  Your Luxury DMC in Egypt </h5>
+                 <h6  class="slogin">  Your Luxury DMC in Egypt </h6>
             </div>
 
             <div>
